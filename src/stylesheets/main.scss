@@ -1,3 +1,183 @@
 /* Your styles go here */
+  $primary:    #086788;
+  $secondary:  #07A0C3;
+  $success:    #3CCD65;
+  $info:       #07A0C3;
+  $warning:    #F0C808;
+  $danger:     #DD1C1A;
+  $light:      #FFF;
+  $dark:       #010F13;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$primary}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+@mixin gradient-directional($start-color: $primary, $end-color: $light, $deg: 145deg) {
+  background-image: linear-gradient($deg, $start-color, $end-color);
+}
+
+// NAVIGATION
+
+.nav-link{
+    color: $primary;
+}
+
+#navbarSupportedContent > ul > li > a{
+    color: $secondary;
+
+    &:hover{
+        color: $primary;
+    }
+}
+
+// BANNER
+
+#banner{
+    background-repeat: no-repeat;
+    background-image: url("../images/banner.jpg");
+    background-attachment: scroll; 
+    background-size: 100%;
+    background-position-x: center;
+
+    .banner-heading{
+    font-size: 5rem;
+    text-transform: uppercase;
+    }
+}
+
+form{
+    border-radius: 2rem;
+
+    input{
+        width: 100%;
+    }
+}
+
+// HOW IT WORKS
+
+#how-it-works{
+    @include gradient-directional;
+
+    .how-it-works-text{
+    margin: 1rem;
+    }
+
+    .how-it-works-heading{
+    font-size: 4rem;
+    padding: 1rem;
+    }
+
+    #how-it-works-link{
+    text-transform: uppercase;
+    }
+}
+
+// ADVANTAGES
+
+.advantages-title-section{
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+// TESTIMONIALS
+
+#testimonials{
+    @include gradient-directional;
+}
+
+// SHORT SELLING POINT
+#selling-point{
+    background-repeat: no-repeat;
+    background-image: url("../images/selling-point-image.jpg");
+    background-attachment: scroll; 
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+// FOOTER
+
+footer{
+    border-top: .2rem solid $primary;
+    padding-top: 1rem;
+
+    .footer-heading{
+        padding-bottom: .5rem;
+    }
+
+    .footer-list{
+        list-style: none;
+
+        & > li{
+            padding: .5rem 0;
+
+            & > a{
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline
+                }
+            }
+        }
+    }
+}
+
+// ICONS
+
+.bi{
+    color: $primary;
+}
+
+.bi-car-front-fill, .bi-arrow-down, .bi-currency-dollar{
+    color: $light;
+}
+
+// TEXT VARIATIONS
+
+.large-text{
+    font-size: 3rem;
+}
+
+.xlarge-text{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+// BORDERS
+
+.rounded-border{
+    border-radius: 2rem;
+}
+
+.primary-border{
+    border: .2rem solid $primary;
+}
+
+.secondary-border{
+    border: .2rem solid $secondary;
+}
+
+.yellow-border{
+     border: .2rem solid $warning;
+}
+
+.red-border{
+     border: .2rem solid $danger;
+}
+
+.white-border{
+     border: .2rem solid $light;
+}
+
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
